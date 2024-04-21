@@ -1,6 +1,6 @@
 # Aufsetzen eines Wahlrechner-Servers
 
-Dieses Repository dient als Hifestellung, um eine [Wahlrechner](https://github.com/wahlrechner/wahlrechner)-Instanz auf einem Server aufzusetzen.
+Dieses Repository dient als Hifestellung, um eine [Wahlrechner](https://github.com/sebastian-meyer/wahlrechner)-Instanz auf einem Server aufzusetzen.
 Die folgende Anleitung funktioniert nur auf Debian-basierten Systemen, und wurde ausschließlich mit `Ubuntu 20.04` getestet.
 
 ## Vorraussetzungen
@@ -16,7 +16,7 @@ sudo apt-get install git
 
 ```
 mkdir wahlrechner-server/
-git clone --recurse-submodules https://github.com/wahlrechner/server wahlrechner-server/
+git clone --recurse-submodules https://github.com/sebastian-meyer/wahlrechner-docker wahlrechner-server/
 cd wahlrechner-server
 ```
 
