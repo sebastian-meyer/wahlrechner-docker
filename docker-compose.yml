@@ -1,11 +1,12 @@
-version: "3"
+name: dresdenzero
 
 services:
     wahlrechner:
-        container_name: wahlrechner
         image: ghcr.io/sebastian-meyer/wahlrechner:latest
         command: bash -c 'docker/wait-for-it/wait-for-it.sh db:3306 -t 120 -- docker/startup-production.sh'
         restart: always
+        networks:
+            - internal_network
         volumes:
             - ./data/static:/code/assets/
             - ./data/media:/code/media/
@@ -19,27 +20,32 @@ services:
             - db
 
     db:
-        container_name: db
         image: mariadb
         restart: always
-        ports:
-            - "3306:3306"
+        networks:
+            - internal_network
         env_file:
             - ./config/config.env
         volumes:
             - ./data/mysql:/var/lib/mysql
 
     web:
-        container_name: web
         build:
             context: web/apache
         restart: always
+        networks:
+            - internal_network
+            - external_network
         ports:
-            - "80:80"
-            - "443:443"
+            - "127.0.0.1:5000:443"
         volumes:
             - ./data/static:/wahlrechner/static
             - ./data/media:/wahlrechner/media
             - ./web/cert:/wahlrechner/cert
             - ./data/logs/apache:/usr/local/apache2/logs
             - /etc/letsencrypt:/etc/letsencrypt
+
+networks:
+    external_network:
+    internal_network:
+        internal: true
