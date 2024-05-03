@@ -16,10 +16,10 @@ cd wahl
 
 ## Wahlrechner Theme als Submodul einbinden
 
-Beispiel für [theme_dresdomat](https://github.com/wahlrechner/theme_buxtomat):
+Beispiel für [Dresden](https://github.com/sebastian-meyer/wahlrechner-theme-dd.git) (mit Dank an @skurfuerst):
 
 ```
-git submodule add https://github.com/wahlrechner/theme_buxtomat.git themes/theme_buxtomat
+git submodule add https://github.com/sebastian-meyer/wahlrechner-theme-dd.git themes/theme_dd
 ```
 
 ## Konfiguration des Wahlrechners
