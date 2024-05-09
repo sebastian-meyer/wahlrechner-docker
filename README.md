@@ -16,7 +16,7 @@ cd wahl
 
 ## Wahlrechner Theme als Submodul einbinden
 
-Beispiel für [Dresden](https://github.com/sebastian-meyer/wahlrechner-theme-dd.git) (mit Dank an @skurfuerst):
+Beispiel für [Dresden](https://github.com/sebastian-meyer/wahlrechner-theme-dd.git) (mit Dank an **[@skurfuerst](https://github.com/skurfuerst)**):
 
 ```
 git submodule add https://github.com/sebastian-meyer/wahlrechner-theme-dd.git themes/theme_dd
