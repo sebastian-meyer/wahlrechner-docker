@@ -1,3 +1,6 @@
 [submodule "themes/theme_default"]
 	path = themes/theme_default
 	url = https://github.com/wahlrechner/theme_default.git
+[submodule "themes/theme_dd"]
+	path = themes/theme_dd
+	url = https://github.com/sebastian-meyer/wahlrechner-theme-dd.git

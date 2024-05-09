@@ -14,7 +14,7 @@ git clone --recurse-submodules https://github.com/sebastian-meyer/wahlrechner-do
 cd wahl
 ```
 
-## Wahlrechner Theme als Submodul einbinden
+## Wahlrechner Theme als Submodul einbinden (optional)
 
 Beispiel für [Dresden](https://github.com/sebastian-meyer/wahlrechner-theme-dd.git) (mit Dank an **[@skurfuerst](https://github.com/skurfuerst)**):
 
