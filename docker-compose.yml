@@ -1,4 +1,4 @@
-name: dresdenzero
+name: wahlkompass
 
 services:
     wahlrechner:

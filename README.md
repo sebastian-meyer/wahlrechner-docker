@@ -14,14 +14,6 @@ git clone --recurse-submodules https://github.com/sebastian-meyer/wahlrechner-do
 cd wahl
 ```
 
-## Wahlrechner Theme als Submodul einbinden (optional)
-
-Beispiel für [Dresden](https://github.com/sebastian-meyer/wahlrechner-theme-dd.git) (mit Dank an **[@skurfuerst](https://github.com/skurfuerst)**):
-
-```
-git submodule add https://github.com/sebastian-meyer/wahlrechner-theme-dd.git themes/theme_dd
-```
-
 ## Konfiguration des Wahlrechners
 
 **Bevor du den Wahlrechner-Server das erste Mal startest,** musst du die Konfigurationsdatei `config.env` erstellen. Eine Vorlage ist unter `config/config.env.example` zu finden.
@@ -41,14 +33,14 @@ cp config/config.env.example config/config.env
 ### Let's Encrypt
 
 ```
-sudo certbot certonly --webroot -w /var/www/http/common/letsencryptauth -d wahl.dresdenzero.de
+sudo certbot certonly --webroot -w /var/www/http/common/letsencryptauth -d wahlkompass-dresden.de
 ```
 
 Erstelle anschließend einen Symlink, damit die Zertifikate automatisch aktualisiert werden können.
 
 ```
 mkdir web/cert/
-ln -s /etc/letsencrypt/live/wahl.dresdenzero.de/* web/cert/
+ln -s /etc/letsencrypt/live/wahlkompass-dresden.de/* web/cert/
 ```
 
 ## Starten, Stoppen und Aktualisieren des Wahlrechners
