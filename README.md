@@ -1,6 +1,6 @@
-# Aufsetzen eines Wahlrechner-Servers für DresdenZero
+# Aufsetzen eines Wahlrechner-Servers für [Wahlkompass Dresden](https://wahlkompass-dresden.de)
 
-Dieses Repository dient als Hifestellung, um eine [Wahlrechner](https://github.com/sebastian-meyer/wahlrechner)-Instanz für [DresdenZero](https://www.dresdenzero.de) auf (m)einem Server aufzusetzen.
+Dieses Repository dient als Hifestellung, um eine [Wahlrechner](https://github.com/sebastian-meyer/wahlrechner)-Instanz für [DresdenZero](https://www.dresdenzero.de), [Zukunftsgestalten](https://zukunftsgestalten.org), [Lokale Agenda Dresden](https://la-dresden.de) und [BUND Dresden](https://www.bund-dresden.de) auf (m)einem Server aufzusetzen.
 Die folgende Anleitung funktioniert nur auf Debian-basierten Systemen, und wurde ausschließlich mit `Debian 11 (Bullseye)` getestet.
 Sie ist außerdem etwas auf die Umgebung des Servers von DresdenZero zugeschnitten und enthält deshalb nicht alle Schritte der [Originalanleitung](https://github.com/wahlrechner/server).
 
@@ -39,7 +39,6 @@ sudo certbot certonly --webroot -w /var/www/http/common/letsencryptauth -d wahlk
 Erstelle anschließend einen Symlink, damit die Zertifikate automatisch aktualisiert werden können.
 
 ```
-mkdir web/cert/
 ln -s /etc/letsencrypt/live/wahlkompass-dresden.de/* web/cert/
 ```
 
